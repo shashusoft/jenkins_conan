@@ -58,10 +58,10 @@ Note: Jfrog artifactory is available for Conan. It contains some of the widely u
 
 Installation of Conan (Linux Environment)
 --------------------------------
-    $pip install conan\
+   $pip install conan
 
 **Check if Conan is installed correctly. Run the following command in your console:**\
-    $conan --version\
+   $conan --version
 
 Getting started:	
 --------------------------------
@@ -71,9 +71,9 @@ Getting started:
 **Create the following source file inside a folder. This will be the source file of our application:**\
    md5.cpp\
    #include "Poco/MD5Engine.h"\
-   #include "Poco/DigestStream.h"\
+   #include "Poco/DigestStream.h"
 
-   #include <iostream>\
+   #include <iostream>
   
    int main(int argc, char** argv)\
    {\
@@ -83,7 +83,7 @@ Getting started:
        ds.close();\
        std::cout << Poco::DigestEngine::digestToHex(md5.digest()) << std::endl;\
        return 0;\
-   }\
+   }
    
 **We know that our application relies on the Poco libraries. Let’s look for it in the \
 Conan Center remote:**\
@@ -92,14 +92,14 @@ Conan Center remote:**\
     Existing package recipes:\
     poco/1.8.1\
     poco/1.9.3\
-    poco/1.9.4\
+    poco/1.9.4
 
 **Create conanfile.txt with build utility and library info**\
    $vi conanfile.txt\
    [requires]\
   poco/1.9.4\
   [generators]\
-  cmake\
+  cmake
   
 **We are going to install the required dependencies and generate the information for the build system:**\
     $conan profile new default --detect  # Generates default profile \
@@ -108,10 +108,10 @@ Conan Center remote:**\
 **You can create many conan profiles. Then each will be specific to your build environment**\
  Now do:\
      $ mkdir build && cd build\
-     $ conan install ..\
+     $ conan install ..
      
 **Conan will install all needed libraries and generates cmake files inside build folder**\
- E.g. conanbuildinfo.cmake\
+ E.g. conanbuildinfo.cmake
  
  **Now ceate CmakeLists.txt file with following info**\
  cmake_minimum_required(VERSION 2.8.12)\
@@ -123,9 +123,9 @@ Conan Center remote:**\
  target_link_libraries(md5 ${CONAN_LIBS})\
  Now, we are ready to build our project
      cmake .. -G “Unix MakeFiles” -DCMAKE_BUILD_TYPE=Release\
-     cmake  --build .   \
+     cmake  --build .   
   
 Run the binary:\
-    ./bin/md5\
+    ./bin/md5
 
 
