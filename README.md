@@ -52,21 +52,23 @@ Create C++ Project with Jenkins
     Note: If you are using cmake utility, then select above commands. 
     Save and Apply
     
-C++ Conan Package Manager [Reference : https://docs.conan.io/en/latest/getting_started.html]\
+#C++ Conan Package Manager [Reference : https://docs.conan.io/en/latest/getting_started.html]\
 
 Note: Jfrog artifactory is available for Conan. It contains some of the widely used C++ packages\
 
 Installation of Conan (Linux Environment)\
+--------------------------------
     $pip install conan\
 
 **Check if Conan is installed correctly. Run the following command in your console:**\
     conan --version\
 
-##Getting started:\	
-    **Create project folder inside your devlopment environment**\
+Getting started:\	
+--------------------------------
+**Create project folder inside your devlopment environment**\
     $mkdir md5_test_project\
 
-    Create the following source file inside a folder. This will be the source file of our application:\
+**Create the following source file inside a folder. This will be the source file of our application:**\
     
    md5.cpp\
    #include "Poco/MD5Engine.h"\
@@ -83,8 +85,8 @@ Installation of Conan (Linux Environment)\
        std::cout << Poco::DigestEngine::digestToHex(md5.digest()) << std::endl;\
        return 0;\
    }\
-    We know that our application relies on the Poco libraries. Let’s look for it in the \
-    Conan Center remote:\
+   **We know that our application relies on the Poco libraries. Let’s look for it in the \
+    Conan Center remote:**\
     $conan search poco –remote=conan-center\
     Output\
     Existing package recipes:\
@@ -92,7 +94,7 @@ Installation of Conan (Linux Environment)\
       poco/1.8.1\
       poco/1.9.3\
       poco/1.9.4\
-Create conanfile.txt with build utility and library info\
+**Create conanfile.txt with build utility and library info**\
     $vi conanfile.txt\
    [requires]\
   poco/1.9.4\
@@ -102,14 +104,14 @@ Create conanfile.txt with build utility and library info\
 **We are going to install the required dependencies and generate the information for the build system:**\
     $conan profile new default --detect  # Generates default profile \
     $conan profile update settings.compiler.libcxx=libstdc++11 default  \
-You can create many conan profiles. Then each will be specific to your build environment\
+**You can create many conan profiles. Then each will be specific to your build environment**\
  Now do:\
      $ mkdir build && cd build\
      $ conan install ..\
      
-Conan will install all needed libraries and generates cmake files inside build folder\
+**Conan will install all needed libraries and generates cmake files inside build folder**\
  E.g. conanbuildinfo.cmake\
- Now ceate CmakeLists.txt file with following info\
+ **Now ceate CmakeLists.txt file with following info**\
  
  cmake_minimum_required(VERSION 2.8.12)\
  project(MD5Encrypter)\
