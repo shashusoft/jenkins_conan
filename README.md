@@ -23,12 +23,12 @@ Jenkins Install (Linux Platform)
 
 Jenkins Getting Started
 -----------------------
-After password is set, select “Install suggested plugins” in http://localhost:8080/		
-Select “Install Suggested Plugins”
-Create user and admin password
-Set URL for your jenkins configuration (customised)
-Jenkins is ready to use
-Refresh browser with http://localhost:8080/		
+After password is set, select “Install suggested plugins” in http://localhost:8080/\		
+Select “Install Suggested Plugins”\
+Create user and admin password\
+Set URL for your jenkins configuration (customised)\
+Jenkins is ready to use\
+Refresh browser with http://localhost:8080/\		
 
 Create C++ Project with Jenkins
 -------------------------------
