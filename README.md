@@ -32,26 +32,26 @@ Refresh browser with http://localhost:8080/
 
 Create C++ Project with Jenkins
 -------------------------------
-Select “New Item” in jenkins web interface
-Enter an item name “MP3_Encoder”. Chose your specific project name. 
-  Our small C++   Project is available in GitHub \n
-  in jenkins web interface, Select “Freestyle Project”
-  Click “Ok”
-  in “Source Code Management” option
-      Select “Git”
-      Enter for example GitHub repository link “***.git”
-      Enter credentials
-  in “Build Triggers” option
-      write script according to cron specification. It defines, build triggers with respect to     	
-      minute, hour, day(s), week(s) and month(s)
-      e.g. H * * * * (poll once hour)
-  in “Build” option
-      select “Execute Shell”
-        write “cmake .”
-      select “Execute Shell”
+    Select “New Item” in jenkins web interface
+    Enter an item name “MP3_Encoder”. Chose your specific project name. 
+    Our small C++   Project is available in GitHub
+    in jenkins web interface, Select “Freestyle Project”
+    Click “Ok”
+    in “Source Code Management” option
+        Select “Git”
+        Enter for example GitHub repository link “***.git”
+        Enter credentials
+    in “Build Triggers” option
+        write script according to cron specification. It defines, build triggers with respect to     	minute, hour, day(s), week(s) and month(s)
+	e.g. H * * * * (poll once hour)
+    in “Build” option
+	select “Execute Shell”
+           write “cmake .”
+	select “Execute Shell”
 	write “make” 
     Note: If you are using cmake utility, then select above commands. 
-Save and Apply
-
+    Save and Apply
+    
+    
 
 
