@@ -7,19 +7,19 @@ https://www.meetup.com/Mannheim-C-Developers-Meetup/
 
 Jenkins Install (Linux Platform)
 --------------------------------
-> Add key:
-    > wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
-> Then add the following entry in your /etc/apt/sources.list:
-    > deb https://pkg.jenkins.io/debian-stable binary/
-> Update your local package index, then finally install Jenkins:
-    > sudo apt-get update
-    > sudo apt-get install jenkins
-> Start Jenkins from Web-browser:
-   > http://localhost:8080/
-> If some issue, check if Jenkins service is started:
-    > systemctl status jenkins
-> jenkins, password is available at :
-    > var/lib/jenkins/secrets/initialAdminPassword
+Add key:\
+    wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -\
+Then add the following entry in your /etc/apt/sources.list:\
+    deb https://pkg.jenkins.io/debian-stable binary/\
+Update your local package index, then finally install Jenkins:\
+    sudo apt-get update\
+    sudo apt-get install jenkins\
+Start Jenkins from Web-browser:\
+   http://localhost:8080/\
+If some issue, check if Jenkins service is started:
+    systemctl status jenkins
+jenkins, password is available at :
+    var/lib/jenkins/secrets/initialAdminPassword
 
 Jenkins Getting Started
 -----------------------
