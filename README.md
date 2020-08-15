@@ -52,11 +52,11 @@ Create C++ Project with Jenkins
     Note: If you are using cmake utility, then select above commands. 
     Save and Apply
     
-#C++ Conan Package Manager [Reference : https://docs.conan.io/en/latest/getting_started.html]\
+C++ Conan Package Manager [Reference : https://docs.conan.io/en/latest/getting_started.html]\
 
 Note: Jfrog artifactory is available for Conan. It contains some of the widely used C++ packages\
 
-##Installation of Conan (Linux Environment)\
+Installation of Conan (Linux Environment)\
     $pip install conan\
 
 **Check if Conan is installed correctly. Run the following command in your console:**\
