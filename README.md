@@ -32,8 +32,8 @@ Refresh browser with http://localhost:8080/
 
 Create C++ Project with Jenkins
 -------------------------------
-Select “New Item” in jenkins web interface \n
-Enter an item name “MP3_Encoder”. Chose your specific project name.  \n
+Select “New Item” in jenkins web interface
+Enter an item name “MP3_Encoder”. Chose your specific project name. 
   Our small C++   Project is available in GitHub \n
   in jenkins web interface, Select “Freestyle Project”
   Click “Ok”
